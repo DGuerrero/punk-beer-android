@@ -1,4 +1,4 @@
-package com.quoders.app.android.punkbeer.ui.beers
+package com.quoders.app.android.punkbeer.ui.stock
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,22 +8,22 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.quoders.app.android.punkbeer.R
 
-class BeersFragment : Fragment() {
+class BeerStockFragment : Fragment() {
 
     companion object {
-        fun newInstance() = BeersFragment()
+        fun newInstance() = BeerStockFragment()
     }
 
-    private lateinit var viewModel: BeersViewModel
+    private lateinit var beerStockViewModel: BeerStockViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.main_fragment, container, false)
+        return inflater.inflate(R.layout.beer_stock_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(BeersViewModel::class.java)
+        beerStockViewModel = ViewModelProviders.of(this).get(BeerStockViewModel::class.java)
     }
 }
